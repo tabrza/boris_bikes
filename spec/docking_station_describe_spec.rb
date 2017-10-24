@@ -8,7 +8,4 @@ ds =   DockingStation.new
     expect(ds).to respond_to (:release_bike)
   end
 
-  it "says if bike works" do
-    expect()
-  end
 end
