@@ -1,17 +1,25 @@
 require 'docking_station'
-require 'bike'
 
 describe DockingStation do
+  subject(:docking_station) { described_class.new }
+  let(:bike) { bike = double(:bike)}
 
-ds =   DockingStation.new
-bike = Bike.new
 
   it "releases bike" do
-    expect(ds).to respond_to (:release_bike)
+    expect(docking_station).to respond_to (:release_bike)
   end
 
   it "works" do
-    expect(ds.release_bike).to eq (bike.working? == true)
+    p bike.working?
+    expect(docking_station.release_bike).to eq (bike.working? == true)
   end
 
+  it "ds responds to bike" do
+    expect(docking_station).to respond_to (:return_bike)
+  end
+
+  # it "returns bike if bike exists" do
+  #   p bike
+  #   expect(docking_station.return_bike).to eq ("Bike has been returned")
+  # end
 end
