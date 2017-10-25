@@ -7,17 +7,13 @@ class DockingStation
     bike = []
   end
 
-  # def bike
-  #   @bike
-  # end
-
   def release_bike
+    raise "No bikes available" unless @bike
     Bike.new
   end
 
   def dock_bike(bike)
     @bike = bike
-
   end
 
   def check_dock
