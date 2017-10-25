@@ -1,7 +1,7 @@
 require 'bike'
 
 describe Bike do
-  subject(:bike) { described_class.new("motor") }
+  bike = Bike.new
 
     describe "if bike works" do
     # bike = Bike.new
