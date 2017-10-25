@@ -14,15 +14,9 @@ class DockingStation
     Bike.new
   end
 
-  def return_bike
-    if bike.exists? then
-      puts "Bike has been returned"
-    else
-      puts "Don't try to return something you don't have you ass."
-    end
+  def dock_bike(bike)
+    true
   end
 
-  def bike_docked?
 
-  end
 end
