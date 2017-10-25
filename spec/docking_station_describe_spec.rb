@@ -22,4 +22,8 @@ describe DockingStation do
     expect(docking_station.dock_bike(bike)).to eq (true)
   end
 
+  it "should show if bike is available for user to rent" do
+    expect(docking_station.check_dock).to eq (true)
+  end
+
 end
